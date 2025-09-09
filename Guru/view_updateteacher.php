@@ -1,0 +1,64 @@
+<?php
+require("controller_teacher.php");
+    if (isset($_GET["updateID"])){
+        $teacher_ID = $_GET["updateID"];
+        $teacher = getTeacherWithID($_GET["updateID"]);
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container p-3">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_teacher.php">Daftar Guru</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_addteacher.php">Tambah Guru</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h1>Update Guru</h1>
+                <form method="POST" action="controller_teacher.php">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputName" class="form-label">Nama</label>
+                            <input type="text" class="form-control" name="inputName" placeholder="Masukkan nama" value="<?=$teacher->name?>">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputPhone" class="form-label">Nomor Telepon</label>
+                            <input type="text" class="form-control" name="inputPhone" placeholder="Masukkan nomor telepon" value="<?=$teacher->phone?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" name="inputAddress" placeholder="Masukkan alamat" value="<?=$teacher->address?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputNote" class="form-label">Catatan</label>
+                            <input type="text" class="form-control" name="inputNote" placeholder="Masukkan catatan" value="<?=$teacher->note?>">
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="input_id" value="<?=$teacher_ID?>">
+                    <button name="button_update" type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
