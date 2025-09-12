@@ -23,6 +23,9 @@ require("controller_student.php");
                     <li class="nav-item">
                         <a class="nav-link active" href="#">View Student</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Tambah Guru</a>
+                    </li>
                 </ul>
             </div>
             <div class="card-body">

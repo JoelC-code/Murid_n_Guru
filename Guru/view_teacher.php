@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="view_addteacher.php">Tambah Guru</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Tambah Guru</a>
+                    </li>
                 </ul>
             </div>
             <div class="card-body">
@@ -38,7 +41,7 @@
                     <tbody>
                         <?php
                         $counter = 0;
-                        $allteacher = getAllTeacher();
+                        $allteacher = fetchGuruList();
                         foreach ($allteacher as $index => $member) {
                             $counter++;
                         ?>

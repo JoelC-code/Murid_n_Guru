@@ -25,7 +25,7 @@ function updateTeacher($teacherID)
     $member->note = $_POST['inputNote'];
 }
 
-function getAllTeacher(){
+function fetchGuruList(){
     return $_SESSION['teacherList'];
 }
 

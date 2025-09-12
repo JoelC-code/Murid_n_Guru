@@ -34,7 +34,7 @@ function updateStudent($index) {
     $muridUpdated->name = $_POST['studentName'];
     $muridUpdated->phone = $_POST['phoneNumber'];
     $muridUpdated->email = $_POST['emailAddress'];
-    $muridUpdated->birthdate = $_POST['emailAddress'];
+    $muridUpdated->birthdate = $_POST['birthDate'];
 }
 
 //pushing button indicator using GET to delete
