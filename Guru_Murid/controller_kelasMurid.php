@@ -1,7 +1,7 @@
-<?php 
-require('../Guru/model_teacher.php');
-require('../Murid/model_student.php');
-session_start();
+<?php
+include_once('../init.php');
+include_once('../Guru/controller_teacher.php');
+include_once('../Murid/controller_student.php');
 
 if(!isset($_SESSION['muridGuruList'])) {
     $_SESSION['muridGuruList'] = array();
@@ -27,11 +27,14 @@ function fetchMuridGuruList() {
 }
 
 function deleteMuridGuru($muridIndex, $guruIndex) {
+    //Jika ada langsug masuk ke if
     if(isset($_SESSION['muridGuruList'][$guruIndex])) {
+        //Cari index di listnya
         $key = array_search($muridIndex, $_SESSION['muridGuruList'][$guruIndex]);
+        //
         if($key !== false) {
-            unset($_SESSION['relationList'][$guruIndex][$key]);
-            $_SESSION['muridGuruList'][$guruIndex] = array_values($_SESSION['relationList'][$guruIndex]);
+            unset($_SESSION['muridGuruList'][$guruIndex][$key]);
+            $_SESSION['muridGuruList'][$guruIndex] = array_values($_SESSION['muridGuruList'][$guruIndex]);
         } 
     }
 }

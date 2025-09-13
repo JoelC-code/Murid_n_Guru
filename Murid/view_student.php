@@ -2,6 +2,12 @@
 <html lang="en">
 <?php
 require("controller_student.php");
+
+
+$allList = fetchMuridList();
+echo "<pre>";
+var_dump($allList);
+echo "</pre>";
 ?>
 
 <head>
@@ -24,7 +30,7 @@ require("controller_student.php");
                         <a class="nav-link active" href="#">View Student</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Tambah Guru</a>
+                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +49,6 @@ require("controller_student.php");
                     <tbody>
                         <?php
                         $counter = 0;
-                        $allList = fetchMuridList();
                         foreach ($allList as $index => $murid) {
                             $counter++;
                         ?>

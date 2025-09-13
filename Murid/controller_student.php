@@ -1,5 +1,5 @@
 <?php 
-include("model_student.php");
+require_once("model_student.php");
 session_start();
 
 //Jika array muridList tidak ada, akan dibuat sebuah array
@@ -53,5 +53,4 @@ if(isset($_POST['updateStudent'])) {
     updateStudent($_POST['updt_muridId']);
     header("Location:view_student.php");
 }
-
 ?>

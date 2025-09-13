@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="view_student.php">View Student</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Tambah Guru</a>
+                    </li>
                 </ul>
             </div>
             <form method="post" action="controller_student.php" class="p-3">

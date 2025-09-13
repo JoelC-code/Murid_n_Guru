@@ -1,6 +1,5 @@
 <?php
-include("model_teacher.php");
-session_start();
+include_once('../init.php');
 
 if (!isset($_SESSION['teacherList'])) {
     $_SESSION['teacherList'] = array();
