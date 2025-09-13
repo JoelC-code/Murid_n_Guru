@@ -8,8 +8,6 @@ if(!isset($_SESSION['muridGuruList'])) {
 }
 
 function assignMuridGuru($muridIndex, $guruIndex) {
-    //Jika belum terbuat array dengan index nama guru, maka array akan dibuat
-
     if(!isset($_SESSION['muridGuruList'][$guruIndex])) {
         $_SESSION['muridGuruList'][$guruIndex] = array();
     }
@@ -39,14 +37,14 @@ function deleteMuridGuru($muridIndex, $guruIndex) {
     }
 }
 
-if(isset($_GET['muridID']['guruID'])) {
-    $muridIndex = $_GET('muridID');
-    $guruIndex = $_GET('guruID');
+if(isset($_GET['muridID']) && isset($_GET['guruID'])) {
+    $muridIndex = $_GET['muridID'];
+    $guruIndex = $_GET['guruID'];
     deleteMuridGuru($muridIndex, $guruIndex);
     header('Location: view_kelasMurid.php');
 }
 
-if(isset($_SESSION['addRelation'])) {
+if(isset($_POST['addRelation'])) {
     $muridIndex = $_POST['listMurid'];
     $guruIndex = $_POST['listGuru'];
 
