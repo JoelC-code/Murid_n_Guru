@@ -21,7 +21,7 @@
                         <a class="nav-link" href="view_student.php">View Student</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Tambah Guru</a>
+                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
                     </li>
                 </ul>
             </div>
