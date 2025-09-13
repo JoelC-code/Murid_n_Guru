@@ -38,4 +38,19 @@ function deleteMuridGuru($muridIndex, $guruIndex) {
         } 
     }
 }
+
+if(isset($_GET['muridID']['guruID'])) {
+    $muridIndex = $_GET('muridID');
+    $guruIndex = $_GET('guruID');
+    deleteMuridGuru($muridIndex, $guruIndex);
+    header('Location: view_kelasMurid.php');
+}
+
+if(isset($_SESSION['addRelation'])) {
+    $muridIndex = $_POST['listMurid'];
+    $guruIndex = $_POST['listGuru'];
+
+    assignMuridGuru($muridIndex, $guruIndex);
+    header('Location: view_kelasMurid.php');
+}
 ?>

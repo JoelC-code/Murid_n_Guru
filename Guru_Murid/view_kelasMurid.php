@@ -17,7 +17,7 @@ $allMuridGuru = fetchMuridGuruList();
 
 <body>
     <div class="container p-3">
-        <h1>Murid</h1>
+        <h1>Murid - Guru</h1>
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
@@ -28,7 +28,7 @@ $allMuridGuru = fetchMuridGuruList();
                         <a class="nav-link" href="../Guru/view_teacher.php">Guru</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Murid Gutu</a>
+                        <a class="nav-link active" href="#">Murid Guru</a>
                     </li>
                 </ul>
             </div>
@@ -43,57 +43,64 @@ $allMuridGuru = fetchMuridGuruList();
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <?php
-                                $counter = 0;
-                                foreach ($allteacher as $index => $guru) {
-                                    $counter++;
-                                ?>
-                    <tr>
-                        <th scope="row"><?= $counter ?></th>
-                        <td><?= $guru->name ?></td>
-                        <td></td>
-                        <td>
-                            <?php if (isset($allMuridGuru[$index])) ?>
-                            <ul>
-
-                            </ul>
-                        </td>
-                        <a href="view_updateteacher.php?updateID=<?= $index ?>">
-                            <button class="btn btn-warning">Update</button>
-                        </a>
-                        </td>
-                    </tr>
-                <?php
-                                }
-                ?> -->
+                        <?php
+                        $counter = 0;
+                        foreach ($allteacher as $guruIndex => $guru) {
+                            $counter++;
+                        ?>
+                            <tr>
+                                <th scope="row"><?= $counter ?></th>
+                                <td><?= $guru->name ?></td>
+                                <td>
+                                    <?php if (isset($allMuridGuru[$guruIndex])) {
+                                        echo "<ul class='list-unstyled'>;";
+                                        foreach ($allMuridGuru[$guruIndex] as $muridIndex) {
+                                            echo "<li>" . $allStudent[$muridIndex]->name . "</li>";
+                                        }
+                                        echo "</ul>";
+                                    } else {
+                                        echo "<em>No Student</em>";
+                                    } ?>
+                                </td>
+                                <a href="view_updateteacher.php?updateID=<?= $index ?>">
+                                    <button class="btn btn-warning">Update</button>
+                                </a>
+                                <td>
+                                    <a href="controller_kelasMurid.php?muridID=<?= $muridIndex ?>&guruID=<?= $guruIndex ?>" class="btn btn-sm btn-danger ms-2">Delete</a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                     </tbody>
                 </table>
 
-                <div>
+                <form method="post" action="controller_kelasMurid.php">
                     <div class="d-flex gap-4 mb-3">
-                        <select name="listGuruName" class="form-select">
+                        <select name="listMurid" class="form-select">
                             <?php
                             foreach ($allStudent as $index => $murid) {
                             ?>
-                                <option value=<?= $murid->name ?>><?= $murid->name ?></option>
+                                <option value=<?= $index ?>><?= $murid->name ?></option>
                             <?php
                             }
                             ?>
                         </select>
-                        <select name="listMuridName" class="form-select">
+                        <select name="listGuru" class="form-select">
                             <?php
                             foreach ($allteacher as $index => $guru) {
                             ?>
-                                <option value=<?= $guru->name ?>><?= $guru->name ?></option>
+                                <option value=<?= $index ?>><?= $guru->name ?></option>
                             <?php
                             }
                             ?>
                         </select>
                     </div>
                     <button class="btn btn-primary" type="submit" name="addRelation">Submit</button>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

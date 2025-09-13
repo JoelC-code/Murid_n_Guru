@@ -5,9 +5,6 @@ require("controller_student.php");
 
 
 $allList = fetchMuridList();
-echo "<pre>";
-var_dump($allList);
-echo "</pre>";
 ?>
 
 <head>
