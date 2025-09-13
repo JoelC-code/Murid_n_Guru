@@ -1,6 +1,5 @@
 <?php 
-require_once("model_student.php");
-session_start();
+include_once(__DIR__ . '/../init.php');
 
 //Jika array muridList tidak ada, akan dibuat sebuah array
 if (!isset($_SESSION['muridList'])) {

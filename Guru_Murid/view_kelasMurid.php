@@ -62,9 +62,6 @@ $allMuridGuru = fetchMuridGuruList();
                                         echo "<em>No Student</em>";
                                     } ?>
                                 </td>
-                                <a href="view_updateteacher.php?updateID=<?= $index ?>">
-                                    <button class="btn btn-warning">Update</button>
-                                </a>
                                 <td>
                                     <a href="controller_kelasMurid.php?muridID=<?= $muridIndex ?>&guruID=<?= $guruIndex ?>" class="btn btn-sm btn-danger ms-2">Delete</a>
                                 </td>
