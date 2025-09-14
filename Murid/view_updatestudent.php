@@ -22,7 +22,7 @@ if (isset($_GET['studentID'])) {
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add Student</a>
+                        <a class="nav-link" href="view_addstudent.php">Add Student</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="view_student.php">View Student</a>
