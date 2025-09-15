@@ -21,10 +21,10 @@ $allList = fetchMuridList();
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="view_addstudent.php">Tambah Murid</a>
+                        <a class="nav-link active" href="#">Daftar Murid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Daftar Murid</a>
+                        <a class="nav-link" href="view_addstudent.php">Tambah Murid</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
@@ -50,16 +50,16 @@ $allList = fetchMuridList();
                             $counter++;
                         ?>
                             <tr>
-                                <th scope="row"><?=$counter?></th>
-                                <td><?=$murid->name?></td>
-                                <td><?=$murid->phone?></td>
-                                <td><?=$murid->email?></td>
-                                <td><?=$murid->birthdate?></td>
+                                <th scope="row"><?= $counter ?></th>
+                                <td><?= $murid->name ?></td>
+                                <td><?= $murid->phone ?></td>
+                                <td><?= $murid->email ?></td>
+                                <td><?= $murid->birthdate ?></td>
                                 <td>
-                                    <a href="view_updatestudent.php?studentID=<?=$index?>">
+                                    <a href="view_updatestudent.php?studentID=<?= $index ?>">
                                         <button class="btn btn-warning">Update</button>
                                     </a>
-                                    <a href="controller_student.php?deleteID=<?=$index?>">
+                                    <a href="controller_student.php?deleteID=<?= $index ?>">
                                         <button class="btn btn-danger">Delete</button>
                                     </a>
                                 </td>

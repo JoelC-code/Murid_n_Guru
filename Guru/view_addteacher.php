@@ -10,6 +10,7 @@
 
 <body>
     <div class="container p-3">
+        <h1>Guru Baru</h1>
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">

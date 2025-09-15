@@ -22,10 +22,10 @@ if (isset($_GET['studentID'])) {
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="view_addstudent.php">Tambah Murid</a>
+                        <a class="nav-link" href="view_student.php">Daftar Murid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="view_student.php">Daftar Murid</a>
+                        <a class="nav-link" href="view_addstudent.php">Tambah Murid</a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@ if (isset($_GET['studentID'])) {
                     <label for="inputAddress2">Tanggal Lahir</label>
                     <input type="date" name="birthDate" class="form-control" id="inputBirthdate" placeholder="dd/mm/yyyy" value=<?= $murid->birthdate ?>>
                 </div>
-                <input type="hidden" name="updt_muridId" value="<?=$muridId?>">
+                <input type="hidden" name="updt_muridId" value="<?= $muridId ?>">
                 <button type="submit" name="updateStudent" class="btn btn-primary p-2 mt-2">Update</button>
             </form>
         </div>
