@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <div class="card-body">
-                <h1>List Guru</h1>
+                <h1>Daftar Guru</h1>
                 <table class="table">
                     <thead>
                         <tr>

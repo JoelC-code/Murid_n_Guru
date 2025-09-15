@@ -15,10 +15,10 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Add Student</a>
+                        <a class="nav-link active" href="#">Tambah Murid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="view_student.php">View Student</a>
+                        <a class="nav-link" href="view_student.php">Daftar Murid</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
@@ -27,7 +27,7 @@
             </div>
             <form method="post" action="controller_student.php" class="p-3">
                 <div class="form-row">
-                    <label for="inputName4">Name</label>
+                    <label for="inputName4">Nama</label>
                     <input type="text" name="studentName" class="form-control" id="inputPassword4" placeholder="Name">
                 </div>
                 <div class="form-group">
@@ -35,11 +35,11 @@
                     <input type="email" name="emailAddress" class="form-control" id="inputEmail4" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <label for="inputPhone">Phone</label>
+                    <label for="inputPhone">No. Telepon</label>
                     <input type="number" name="phoneNumber" class="form-control" id="inputPhone" placeholder="+xx-xxxx-xxxx">
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress2">Birthdate</label>
+                    <label for="inputAddress2">Tanggal Lahir</label>
                     <input type="date" name="birthDate" class="form-control" id="inputBirthdate" placeholder="dd/mm/yyyy">
                 </div>
                 <button type="submit" name="registStudent" class="btn btn-primary p-2 mt-2">Add Student</button>

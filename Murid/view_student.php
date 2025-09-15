@@ -21,10 +21,10 @@ $allList = fetchMuridList();
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="view_addstudent.php">Add Student</a>
+                        <a class="nav-link" href="view_addstudent.php">Tambah Murid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">View Student</a>
+                        <a class="nav-link active" href="#">Daftar Murid</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
@@ -36,11 +36,11 @@ $allList = fetchMuridList();
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Phone</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">No. Telepon</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Birthdate</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Tanggal Lahir</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>

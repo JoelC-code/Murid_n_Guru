@@ -22,16 +22,16 @@ if (isset($_GET['studentID'])) {
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="view_addstudent.php">Add Student</a>
+                        <a class="nav-link" href="view_addstudent.php">Tambah Murid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="view_student.php">View Student</a>
+                        <a class="nav-link" href="view_student.php">Daftar Murid</a>
                     </li>
                 </ul>
             </div>
             <form method="post" action="controller_student.php" class="p-3">
                 <div class="form-row">
-                    <label for="inputName4">Name</label>
+                    <label for="inputName4">Nama</label>
                     <input type="text" name="studentName" class="form-control" id="inputPassword4" placeholder="Name" value=<?= $murid->name ?>>
                 </div>
                 <div class="form-group">
@@ -39,11 +39,11 @@ if (isset($_GET['studentID'])) {
                     <input type="email" name="emailAddress" class="form-control" id="inputEmail4" placeholder="Email" value=<?= $murid->email ?>>
                 </div>
                 <div class="form-group">
-                    <label for="inputPhone">Phone</label>
+                    <label for="inputPhone">No. Telepon</label>
                     <input type="number" name="phoneNumber" class="form-control" id="inputPhone" placeholder="+xx-xxxx-xxxx" value=<?= $murid->phone ?>>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress2">Birthdate</label>
+                    <label for="inputAddress2">Tanggal Lahir</label>
                     <input type="date" name="birthDate" class="form-control" id="inputBirthdate" placeholder="dd/mm/yyyy" value=<?= $murid->birthdate ?>>
                 </div>
                 <input type="hidden" name="updt_muridId" value="<?=$muridId?>">
