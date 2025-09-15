@@ -15,10 +15,10 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Tambah Murid</a>
+                        <a class="nav-link" href="view_student.php">Daftar Murid</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="view_student.php">Daftar Murid</a>
+                        <a class="nav-link active" href="#">Tambah Murid</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>

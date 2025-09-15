@@ -11,6 +11,7 @@
 
 <body>
     <div class="container p-3">
+        <h1>Guru</h1>
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
@@ -21,7 +22,7 @@
                         <a class="nav-link" href="view_addteacher.php">Tambah Guru</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
+                        <a class="nav-link" href="../Guru_Murid/view_kelasMurid.php">Murid - Guru</a>
                     </li>
                 </ul>
             </div>
